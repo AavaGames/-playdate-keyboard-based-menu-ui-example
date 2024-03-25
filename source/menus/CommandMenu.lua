@@ -20,5 +20,5 @@ function CommandMenu:init(menuManager)
 end
 
 function CommandMenu:open()
-    self.menuManager:addMenu(self.menu)
+    self.menu:open()
 end

@@ -65,5 +65,5 @@ function DebugMenu:init(menuManager)
 end
 
 function DebugMenu:open()
-    self.menuManager:addMenu(self.menu)
+    self.menu:open()
 end

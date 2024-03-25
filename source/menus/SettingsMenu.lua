@@ -47,5 +47,5 @@ function SettingsMenu:init(menuManager)
 end
 
 function SettingsMenu:open()
-    self.menuManager:addMenu(self.menu)
+    self.menu:open()
 end
