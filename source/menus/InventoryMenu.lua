@@ -26,6 +26,6 @@ function InventoryMenu:open()
 	end
 
 	-- Create the Menu and show on screen
-	self.menu = Menu(self.menuManager, "Inventory (Non-functional)", items)
+	self.menu = Menu(self.menuManager, "Inventory (Non-functional)", newFont, items)
     self.menu:open()
 end

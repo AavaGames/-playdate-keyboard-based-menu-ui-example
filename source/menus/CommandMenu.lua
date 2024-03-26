@@ -2,9 +2,8 @@ class("CommandMenu").extends()
 
 function CommandMenu:init(menuManager)
 
-    self.showing = false
     self.menuManager = menuManager
-    self.menu = Menu(menuManager, "COMMANDS", {
+    self.menu = Menu(menuManager, "COMMANDS", baseFont, {
 
         MenuItem("Centre Camera on Player", nil, true, true, false, function ()
             -- A global game manager

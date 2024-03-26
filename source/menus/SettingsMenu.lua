@@ -16,12 +16,25 @@ function SettingsMenu:init(menuManager)
 		end),
 
 		-- Cycle through fonts
-		MenuItemOptions("Font", nil, false, false, false, { "10px", "8px" }, 2, function (option)
-			if (option == "10px") then
-				self.menuManager:setFont(baseFont)
-			elseif (option == "8px") then
-				self.menuManager:setFont(newFont)
+		MenuItemOptions("Settings Menu Padding", nil, false, false, false, { "4, 4", "10, 10", "30, 4", "0, 0" }, 1, function (option)
+			if (option == "4, 4") then
+				self.menu:SetPadding(4, 4)
+			elseif (option == "10, 10") then
+				self.menu:SetPadding(10, 10)
+			elseif (option == "30, 4") then
+				self.menu:SetPadding(30, 4)
+			elseif (option == "0, 0") then
+				self.menu:SetPadding(0, 0)
 			end
+		end),
+
+		-- Cycle through fonts
+		MenuItemOptions("Game Font", nil, false, false, false, { "10px", "8px" }, 2, function (option)
+			-- if (option == "10px") then
+			-- 	self.gameManager:setFont(baseFont)
+			-- elseif (option == "8px") then
+			-- 	self.gameManager:setFont(newFont)
+			-- end
 		end),
 
 		-- Toggles a setting variable
@@ -43,7 +56,7 @@ function SettingsMenu:init(menuManager)
 		end))
 	end
 
-    self.menu = Menu(menuManager, "SETTINGS", items)
+    self.menu = Menu(menuManager, "SETTINGS", newFont, items)
 end
 
 function SettingsMenu:open()

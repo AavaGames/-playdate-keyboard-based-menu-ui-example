@@ -11,7 +11,6 @@ newFont = gfx.font.new("font/CompaqThin_8x16")
 	You can use these call backs to disable/enable input to your gameplay
 ]] 
 local menuManager = MenuManager(
-	newFont,
 	function() 
 		print("opened the first menu!");
 	end,
